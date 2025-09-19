@@ -6,7 +6,8 @@
 
 body{
     background: #eaeaea;
-    overflow: hidden;
+    overflow: hidden; /* Lo que se encuentre fuera del contenedor no se vera, lo aplicamos cuando las tarjetas sobre salen del contenedor */
+     
 }
  /* ======================== CONTENEDOR ======================== */
 .container{
@@ -64,4 +65,46 @@ body{
 .slide .item:nth-child(n + 6){
     left: calc(50% + 660px);    /* Mitad + 660px */
     opacity: 0;                 /* Invisibles */
+}
+
+.item .content {
+    position: absolute;             /* Posicionado dentro del item */
+    top: 50%;                       
+    left: 100px;                    
+    width: 300px;                   
+    text-align: left;               /* Texto alineado a la izquierda */
+    color: #eaeaea;                 /* Texto gris claro */
+    transform: translate(0, -50%);  /* Ajuste para centrarlo verticalmente */
+    font-family: system-ui, sans-serif; /* Tipografía moderna */
+    display: none;                  /* Oculto por defecto */
+}
+
+/* El contenido del segundo slide se hace visible */
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name {
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0; /* Lo ponemos invisible por el momento. La animacion lo activara*/
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+/* Descripcion del contenido (Div class des) */
+.content .des {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+/* Boton (See More) */
+
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
 }
