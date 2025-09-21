@@ -89,7 +89,7 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0; /* Lo ponemos invisible por el momento. La animacion lo activara*/
-    animation: animate 1s ease-in-out 1 forwards;
+    animation: animate 0.5s ease-in-out 1 forwards;
 }
 
 /* Descripcion del contenido (Div class des) */
@@ -97,7 +97,7 @@ body{
     margin-top: 10px;
     margin-bottom: 20px;
     opacity: 0;
-    animation: animate 1s ease-in-out 0.3s 1 forwards;
+    animation: animate 0.5s ease-in-out 0.2s 1 forwards;
 }
 /* Boton (See More) */
 
@@ -106,7 +106,7 @@ body{
     border: none;
     cursor: pointer;
     opacity: 0;
-    animation: animate 1s ease-in-out 0.6s 1 forwards;
+    animation: animate 0.5s ease-in-out 0.4s 1 forwards;
 }
 /* Animaciones de introduccion */
 @keyframes animate { /* Esta linea nos permite crear animaciones personalizadas*/
